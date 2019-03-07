@@ -2,9 +2,9 @@
 
 cd slate
 bundle exec middleman build --clean
+cp -vr build ..
 cd ..
-git add slate/build -f
+git add ./build -f
 git commit -m 'Deploying to gh-pages'
-git push origin `git subtree split -P slate/build -b gh-pages`:gh-pages --force
-git reset HEAD~1
+git push origin `git subtree split -P build -b gh-pages`:gh-pages --force
 
