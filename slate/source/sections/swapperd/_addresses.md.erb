@@ -1,67 +1,6 @@
-# Balances
+## Addresses
 
-## All Tokens
-
-```shell
-curl -i     \
-     -X GET \
-     http://username:password@localhost:17927/balances
-```
-
-> The response body is structured like this:
-
-```json
-{
-    "BTC": {
-    "address": "mzKgUBHX7xSkKiNrdnxTe6fJKAcvFri2Tc",
-    "decimals": 8,
-    "balance": "19190614"
-    },
-    "WBTC": {
-    "address": "0x5Ea5F67cC958023F2da2ea92231d358F2a3BbA47",
-    "decimals": 18,
-    "balance": "0"
-  }
-}
-```
-
-### HTTP Request
-
-`GET http://localhost:17927/balances`
-
-<aside class="success">
-This is a protected HTTP endpoint.
-</aside>
-
-## Single Token
-
-```shell
-curl -i     \
-     -X GET \
-     http://username:password@localhost:17927/balances/btc
-```
-
-> The response body is structured like this:
-
-```json
-{
-    "address": "mzKgUBHX7xSkKiNrdnxTe6fJKAcvFri2Tc",
-    "decimals": 8,
-    "balance": "19149414"
-}
-```
-
-### HTTP Request
-
-`GET http://localhost:17927/balances/{token}`
-
-<aside class="success">
-This is a protected HTTP endpoint.
-</aside>
-
-# Addresses
-
-## All Tokens
+### All Tokens
 
 ```shell
 curl -i     \
@@ -88,7 +27,7 @@ curl -i     \
 }
 ```
 
-### HTTP Request
+#### HTTP Request
 
 `GET http://localhost:17927/addresses`
 
@@ -96,7 +35,7 @@ curl -i     \
 This is a protected HTTP endpoint.
 </aside>
 
-## Single Token
+### Single Token
 
 ```shell
 curl -i     \
@@ -110,7 +49,7 @@ curl -i     \
 0x5Ea5F67cC958023F2da2ea92231d358F2a3BbA47
 ```
 
-### HTTP Request
+#### HTTP Request
 
 `GET http://localhost:17927/addresses/{token}`
 
@@ -118,9 +57,9 @@ curl -i     \
 This is a protected HTTP endpoint.
 </aside>
 
-# Transfers
+## Transfers
 
-## Transferring funds
+### Transferring funds
 
 ```shell
 curl -i      \
@@ -133,7 +72,7 @@ curl -i      \
      http://username:password@localhost:17927/transfers
 ```
 
-### HTTP Request
+#### HTTP Request
 
 `POST http://localhost:17927/transfers`
 
@@ -141,7 +80,7 @@ curl -i      \
 This is a protected HTTP endpoint.
 </aside>
 
-## Details of past transactions
+### Details of past transactions
 
 ```shell
 curl -i      \
@@ -174,7 +113,7 @@ curl -i      \
 }
 ```
 
-### HTTP Request
+#### HTTP Request
 
 `GET http://127.0.0.1:17927/transfers`
 
@@ -182,9 +121,9 @@ curl -i      \
 This is a protected HTTP endpoint.
 </aside>
 
-# Info
+## Info
 
-## Getting information about Swapperd
+### Getting information about Swapperd
 
 ```shell
 curl -i     \
@@ -221,7 +160,7 @@ curl -i     \
 }
 ```
 
-### HTTP Request
+#### HTTP Request
 
 `GET http://localhost:17927/info`
 

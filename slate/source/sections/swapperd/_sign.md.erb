@@ -1,8 +1,8 @@
-# Sign
+## Sign
 
 Swapperd uses the identity ECDSA keypair to sign messages, to prove identity. It supports signing base64, hex and JSON strings. This endpoint can be used to sign arbitrary messages, and no blockchain uses this key pair so it cannot lead to the loss of funds. 
 
-## Getting Swapperd to sign a JSON message with the identity key pair.
+### Getting Swapperd to sign a JSON message with the identity key pair.
 
 Signing an arbitrary JSON object
 
@@ -26,7 +26,7 @@ curl -i     \
 }
 ```
 
-### HTTP Request
+#### HTTP Request
 
 `GET http://localhost:17927/sign/json`
 
@@ -34,7 +34,7 @@ curl -i     \
 This is a protected HTTP endpoint.
 </aside>
 
-## Getting Swapperd to sign a hex message with the identity key pair.
+### Getting Swapperd to sign a hex message with the identity key pair.
 
 Signing an arbitrary hex string
 
@@ -54,7 +54,7 @@ curl -i     \
     }
 ```
 
-### HTTP Request
+#### HTTP Request
 
 `GET http://localhost:17927/sign/hex`
 
@@ -62,7 +62,7 @@ curl -i     \
 This is a protected HTTP endpoint.
 </aside>
 
-## Getting Swapperd to sign a base64 message with the identity key pair.
+### Getting Swapperd to sign a base64 message with the identity key pair.
 
 Signing an arbitrary base64 string
 
@@ -82,7 +82,7 @@ curl -i     \
 }
 ```
 
-### HTTP Request
+#### HTTP Request
 
 `GET http://localhost:17927/sign/base64`
 

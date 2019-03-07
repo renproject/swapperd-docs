@@ -1,4 +1,4 @@
-# Swaps
+## Swaps
 
 Executing an atomic swap requires two parties to participate in an interactive swapping process. This interactive swapping process will either result in both parties exchanging their tokens, or both parties keeping their tokens.
 
@@ -52,7 +52,7 @@ delay | bool (optional, default: false) | set it to true if it is a delayed swap
 delayCallbackURL | string (optional) | url to which swapperd can post the partial swap information to get it filled.
 delayInfo | JSON (optional) | information required by your server behind `delayCallbackURL` to identify the user and the swap.
 
-## Beginning an atomic swap
+### Beginning an atomic swap
 
 > Beginning an atomic swap by initiating first:
 
@@ -97,7 +97,7 @@ Swapperd validates the request and generates the responding swap object. The beg
 
 The beginning party can check the status of their swap using the <code>id</code> returned by the swapperd.
 
-### HTTP Request
+#### HTTP Request
 
 `POST http://localhost:17927/swaps`
 
@@ -106,7 +106,7 @@ This is a protected HTTP endpoint.
 </aside>
 
 
-## Responding to an atomic swap
+### Responding to an atomic swap
 
 > Respond to an atomic swap by initiating second:
 
@@ -137,7 +137,7 @@ curl -i      \
 
 After receiving the response from the beginning party (and checking the KYC information if required), the responding party sends the swap object they received to their swapperd.
 
-### HTTP Request
+#### HTTP Request
 
 `POST http://localhost:17927/swaps`
 
@@ -145,7 +145,7 @@ After receiving the response from the beginning party (and checking the KYC info
 This is a protected HTTP endpoint.
 </aside>
 
-## Starting a delayed swap
+### Starting a delayed swap
 
 In some cases, we do not know both sides of an atomic swap, before committing to an atomic swap. An example use-case would be an exchange using swapperd, and an
 exchange would want to make sure that if it finds an order match the users execute the swap. To solve this problem, we introduced a feature called delayed swaps.
@@ -248,7 +248,7 @@ curl -i     \
 }
 ```
 
-### HTTP Request
+#### HTTP Request
 
 `GET http://localhost:17927/swaps`
 
