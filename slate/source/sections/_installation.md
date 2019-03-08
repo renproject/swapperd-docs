@@ -8,12 +8,12 @@
 curl https://git.io/test-swapperd -sSLf | sh
 ```
 
-*SwapperD* installs itself as a system service. In the event of an unexpected shutdown, Swapperd automatically restarts, and on the first HTTP request, it resumes all pending atomic swaps.
+*SwapperD* installs itself as a system service. In the event of an unexpected shutdown, *SwapperD* automatically restarts, and on the first HTTP request, it resumes all pending atomic swaps.
 
-A `mnemonic` is generated during the installation process. Swapperd uses this `mnemonic`, with the `password` provided in the swap request, to generate it's Bitcoin and Ethereum private keys on-demand.
+A `mnemonic` is generated during the installation process. *SwapperD* uses this `mnemonic`, with the `password` provided in the swap request, to generate it's Bitcoin and Ethereum private keys on-demand.
 
 <aside class="success">
-Swapperd never stores private keys to persistent storage. 
+<i>SwapperD</i> never stores private keys to persistent storage. 
 </aside>
 
 <aside class="notice">

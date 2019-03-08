@@ -1,6 +1,6 @@
 # ID
 
-Swapperd uses a separate ECDSA keypair to sign messages, to prove identity. This id can be connected to KYC details, which allows KYC verification for atomic swaps (the developer/counter-party can make sure that the user is KYCd before doing atomic swaps with them), This is an entirely optional feature.
+*SwapperD* uses a separate ECDSA keypair to sign messages, to prove identity. This id can be connected to KYC details, which allows KYC verification for atomic swaps (the developer/counter-party can make sure that the user is KYCd before doing atomic swaps with them), This is an entirely optional feature.
 
 ## `GET` SwapperD ID
 
