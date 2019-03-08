@@ -262,7 +262,7 @@ curl -i     \
 
 Check the status of existing swaps.
 
-**HTTP Endpoint:** `GET` /swaps`
+**HTTP Endpoint:** `GET /swaps`
 
 |         | SwapperD | SwapperD Desktop |
 | ------- | -------- | ---------------- |
