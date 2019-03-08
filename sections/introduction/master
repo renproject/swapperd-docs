@@ -1,4 +1,0 @@
-<h1 id='introduction'>Introduction</h1>
-<p>Welcome to <em>SwapperD</em>! <em>SwapperD</em> is a daemon service that can execute cross-chain atomic swaps between Bitcoin, Ethereum, and ERC20 tokens, with more blockchain support coming soon. There are two ways to interact with <em>SwapperD</em>: either directly with the <em>SwapperD</em> daemon; or through the <a href="https://github.com/renproject/swapperd-desktop"><em>SwapperD Desktop</em></a> application.</p>
-
-<p><em>SwapperD</em> is a standalone daemon service but the <em>SwapperD Desktop</em> application relies on <em>SwapperD</em> under the hood. When installing <em>SwapperD Desktop</em> the <em>SwapperD</em> daemon will be installed as well.</p>
