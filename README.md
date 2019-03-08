@@ -10,8 +10,7 @@ bundle install --path vendor/bundle
 # Building docs
 
 ```sh
-cd slate
-bundle exec middleman server
+make serve
 ```
 
 Your docs should be live at <http://localhost:4567>. The docs will be rebuilt when you refresh the page.
@@ -19,5 +18,5 @@ Your docs should be live at <http://localhost:4567>. The docs will be rebuilt wh
 # Deploying to Github Pages
 
 ```sh
-./deploy.sh
+make deploy
 ```
