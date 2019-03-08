@@ -1,6 +1,6 @@
-## Info
+# Info
 
-### Getting information about Swapperd
+## `GET` SwapperD Info
 
 ```shell
 curl -i     \
@@ -37,10 +37,11 @@ curl -i     \
 }
 ```
 
-#### HTTP Request
+Check the status of SwapperD.
 
-`GET http://localhost:17927/info`
+**HTTP Endpoint:** `GET /info`
 
-<aside class="success">
-This is a protected HTTP endpoint.
-</aside>
+|         | SwapperD | SwapperD Desktop |
+| ------- | -------- | ---------------- |
+| Mainnet | http://localhost:7927/info | http://localhost:7928/info |
+| Testnet | http://localhost:17927/info | http://localhost:7928/info?network=testnet |

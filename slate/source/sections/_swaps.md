@@ -1,4 +1,4 @@
-## Swaps
+# Swaps
 
 Executing an atomic swap requires two parties to participate in an interactive swapping process. This interactive swapping process will either result in both parties exchanging their tokens, or both parties keeping their tokens.
 
@@ -17,7 +17,8 @@ Swapperd handles all other interactions. Swapperd is built to be fault-tolerant 
 Swapperd cannot execute the interactive swapping process when the host machine is shut down, or offline. Keeping the host machine shutdown, or offline, for more than 24 hours could result in the loss of funds!
 </aside>
 
-### Supported Tokens:
+## Supported Tokens
+
 - Bitcoin: "bitcoin", "btc", "xbt"
 - Ether: "ethereum", "eth", "ether"
 - WrappedBitcoin: "wrappedbtc", "wbtc", "wrappedbitcoin"
@@ -52,7 +53,7 @@ delay | bool (optional, default: false) | set it to true if it is a delayed swap
 delayCallbackURL | string (optional) | url to which swapperd can post the partial swap information to get it filled.
 delayInfo | JSON (optional) | information required by your server behind `delayCallbackURL` to identify the user and the swap.
 
-### Beginning an atomic swap
+## `POST` Starting swaps
 
 > Beginning an atomic swap by initiating first:
 
@@ -97,16 +98,19 @@ Swapperd validates the request and generates the responding swap object. The beg
 
 The beginning party can check the status of their swap using the <code>id</code> returned by the swapperd.
 
-#### HTTP Request
+**HTTP Endpoint:** `POST /swaps`
 
-`POST http://localhost:17927/swaps`
+|         | SwapperD | SwapperD Desktop |
+| ------- | -------- | ---------------- |
+| Mainnet | http://localhost:7927/swaps | http://localhost:7928/swaps |
+| Testnet | http://localhost:17927/swaps | http://localhost:7928/swaps?network=testnet |
 
 <aside class="success">
-This is a protected HTTP endpoint.
+Basic Authentication is required for these SwapperD HTTP endpoints. 
 </aside>
 
 
-### Responding to an atomic swap
+## `POST` Responding to swaps
 
 > Respond to an atomic swap by initiating second:
 
@@ -137,15 +141,19 @@ curl -i      \
 
 After receiving the response from the beginning party (and checking the KYC information if required), the responding party sends the swap object they received to their swapperd.
 
-#### HTTP Request
+**HTTP Endpoint:** `POST /swaps`
 
-`POST http://localhost:17927/swaps`
+|         | SwapperD | SwapperD Desktop |
+| ------- | -------- | ---------------- |
+| Mainnet | http://localhost:7927/swaps | http://localhost:7928/swaps |
+| Testnet | http://localhost:17927/swaps | http://localhost:7928/swaps?network=testnet |
 
 <aside class="success">
-This is a protected HTTP endpoint.
+Basic Authentication is required for these SwapperD HTTP endpoints. 
 </aside>
 
-### Starting a delayed swap
+
+## `POST` Starting delayed swaps
 
 In some cases, we do not know both sides of an atomic swap, before committing to an atomic swap. An example use-case would be an exchange using swapperd, and an
 exchange would want to make sure that if it finds an order match the users execute the swap. To solve this problem, we introduced a feature called delayed swaps.
@@ -205,15 +213,19 @@ Status Code | Meaning | Response
 204 | StatusNoContent -- Please try again after some time. | Nothing.
 410 | StatusGone -- The swap is cancelled, stop requesting. | Nothing.
 
-### HTTP Request
+**HTTP Endpoint:** `POST /swaps`
 
-`POST http://localhost:17927/swaps`
+|         | SwapperD | SwapperD Desktop |
+| ------- | -------- | ---------------- |
+| Mainnet | http://localhost:7927/swaps | http://localhost:7928/swaps |
+| Testnet | http://localhost:17927/swaps | http://localhost:7928/swaps?network=testnet |
 
 <aside class="success">
-This is a protected HTTP endpoint.
+Basic Authentication is required for these SwapperD HTTP endpoints. 
 </aside>
 
-## Status of existing atomic swaps
+
+## `GET` Status of existing swaps
 
 ```shell
 curl -i     \
@@ -248,11 +260,15 @@ curl -i     \
 }
 ```
 
-#### HTTP Request
+Check the status of existing swaps.
 
-`GET http://localhost:17927/swaps`
+**HTTP Endpoint:** `GET` /swaps`
+
+|         | SwapperD | SwapperD Desktop |
+| ------- | -------- | ---------------- |
+| Mainnet | http://localhost:7927/swaps | http://localhost:7928/swaps |
+| Testnet | http://localhost:17927/swaps | http://localhost:7928/swaps?network=testnet |
 
 <aside class="success">
-This is a protected HTTP endpoint.
+Basic Authentication is required for these SwapperD HTTP endpoints. 
 </aside>
-

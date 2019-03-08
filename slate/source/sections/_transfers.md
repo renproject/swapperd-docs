@@ -2,8 +2,6 @@
 
 ## `POST` Transferring funds
 
-Transfer tokens out of the wallet.
-
 > Transferring 0.001 Testnet BTC directly out of SwapperD
 
 ```shell
@@ -17,6 +15,8 @@ curl -i      \
      http://username:password@localhost:17927/transfers
 ```
 
+Transfer tokens out of the wallet.
+
 **HTTP Endpoint:** `POST /transfers`
 
 |         | SwapperD | SwapperD Desktop |
@@ -29,8 +29,6 @@ Basic Authentication is required for these SwapperD HTTP endpoints.
 </aside>
 
 ## `GET` Details of past transactions
-
-See past transaction information.
 
 > Getting the past Testnet transactions directly out of SwapperD
 
@@ -64,6 +62,8 @@ curl -i     \
     ]
 }
 ```
+
+See past transaction information.
 
 **HTTP Endpoint:** `GET /transfers`
 
